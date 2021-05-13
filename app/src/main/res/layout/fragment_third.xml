@@ -7,13 +7,12 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
-        android:layout_marginBottom="356dp"
-        android:background="#DF3434"
-        android:text="Welcome to the shop"
+        android:layout_marginTop="335dp"
+        android:layout_marginBottom="377dp"
+        android:text="Progress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -49,24 +50,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        drawerLayout.closeDrawer(GravityCompat.START);
         if(menuItem.getItemId() == R.id.home){
+            //MainFragment == home
 
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment,new MainFragment());
+            fragmentTransaction.commit();
         }
 
         if(menuItem.getItemId() == R.id.shop){
+            //FragmentSecond==Shop
 
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment,new FragmentSecond());
+            fragmentTransaction.commit();
         }
 
         if(menuItem.getItemId() == R.id.progress){
-
+            //FragmentThird==Progress
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment,new FragmentThird());
+            fragmentTransaction.commit();
         }
 
         if(menuItem.getItemId() == R.id.profile){
-
+            //FragmentFourth==Profile
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment,new FragmentFourth());
+            fragmentTransaction.commit();
         }
 
         if(menuItem.getItemId() == R.id.settings){
-
+            //FragmentFifth==Settings
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment,new FragmentFifth());
+            fragmentTransaction.commit();
         }
         return true;
     }
